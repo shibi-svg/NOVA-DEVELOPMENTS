@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Developments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Intro Animation -->
+    <div id="intro-animation" class="intro-container">
+        <div class="intro-content">
+            <div class="logo-animation">
+                <h1>NOVA</h1>
+                <span class="tagline">Developments</span>
+            </div>
+            <p class="loading-text">Welcome to Nova Developments</p>
+        </div>
+    </div>
+
+    <!-- Sign Page -->
+    <div id="sign-page" class="sign-page hidden">
+        <div class="sign-container">
+            <div class="sign-card">
+                <h1>NOVA Developments</h1>
+                <p class="subtitle">Welcome to the Future</p>
+                
+                <div class="sign-buttons">
+                    <button class="btn btn-primary" onclick="toggleSignUp()">Sign Up</button>
+                    <button class="btn btn-secondary" onclick="toggleLogIn()">Log In</button>
+                </div>
+
+                <!-- Sign Up Form -->
+                <form id="signup-form" class="auth-form hidden">
+                    <h2>Create Account</h2>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <p class="form-toggle">Already have an account? <a href="#" onclick="toggleLogIn()">Log In</a></p>
+                </form>
+
+                <!-- Log In Form -->
+                <form id="login-form" class="auth-form hidden">
+                    <h2>Welcome Back</h2>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <p class="form-toggle">Don't have an account? <a href="#" onclick="toggleSignUp()">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (After Sign In) -->
+    <div id="main-content" class="hidden">
+        <nav class="navbar">
+            <div class="nav-brand">NOVA Developments</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+        
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-photo">
+                    <img src="SHIBIN KS.jpg" alt="Shibin KS Profile" id="profileImg">
+                </div>
+                <h1>Shibin KS</h1>
+                <p class="tagline">“Protecting your systems while building powerful digital experiences.”</p>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <h2>About Nova Developments</h2>
+                <p class="about-intro">Innovation meets excellence in everything we do.</p>
+                
+                <div class="about-bio">
+                    <h3>About Me</h3>
+                    <p>I have strong skills in both Offensive and Defensive Security. On the offensive side, I have hands-on experience with VAPT, Wireless Hacking, Bug Bounty, Exploitation, and Social Engineering. In Defensive Security, I am familiar with Network Defense, SOC operations, SIEM tools, Cloud Security, Endpoint Security, and Malware Analysis. Along with cybersecurity, I also work in Frontend Development, using technologies like HTML, CSS, JavaScript, React.js, Bootstrap, and Tailwind CSS to build clean and responsive user interfaces.</p>
+                </div>
+
+                <div class="education-section">
+                    <h3>Education</h3>
+                    <div class="education-card">
+                        <h4>Advanced Diploma in Information Security</h4>
+                        <p class="institution">Offenso Academy, Kochi</p>
+                        <p class="duration">2025 - Present</p>
+                    </div>
+                    <div class="education-card">
+                        <h4>Higher Secondary (+1)</h4>
+                        <p class="stream">Computer Science</p>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-card">
+                        <h3>Our Mission</h3>
+                        <p>We are committed to delivering cutting-edge development solutions that transform businesses and empower innovation.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Our Vision</h3>
+                        <p>To be the leading development partner that creates meaningful digital experiences and sustainable growth.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Our Values</h3>
+                        <p>Excellence, integrity, innovation, and customer satisfaction drive everything we do at Nova Developments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="services-container">
+                <h2>Our Services</h2>
+                <p class="services-intro">Comprehensive solutions tailored to your needs</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔒</div>
+                        <h3>Offensive Security</h3>
+                        <p>VAPT, Wireless Hacking, Bug Bounty, Exploitation, and Social Engineering to identify and fix vulnerabilities.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🛡️</div>
+                        <h3>Defensive Security</h3>
+                        <p>Network Defense, SOC operations, SIEM tools, Cloud Security, Endpoint Security, and Malware Analysis.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Frontend Development</h3>
+                        <p>Beautiful, responsive websites and applications using HTML, CSS, JavaScript, React.js, Bootstrap, and Tailwind CSS.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Web Solutions</h3>
+                        <p>Complete web development solutions from concept to deployment with security and performance in mind.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔍</div>
+                        <h3>Security Audits</h3>
+                        <p>Comprehensive security assessments and audits to ensure your systems are protected from threats.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💡</div>
+                        <h3>Consulting</h3>
+                        <p>Expert consultation on security best practices, development strategies, and technology implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We'd love to hear from you!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Email</h3>
+                        <p><a href="mailto:shibinkurishingal@gmail.com">shibinkurishingal@gmail.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+919188760292">+91 9188760292</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Instagram</h3>
+                        <p><a href="https://www.instagram.com/shiibeeee__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">@shiibeeee__</a></p>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
